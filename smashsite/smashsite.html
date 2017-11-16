@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            body {
+                height:100%;
+                overflow-y:hidden;
+                background:#ba4d12;
+                padding:0px;
+                margin:0px;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            #header {
+                margin:0px;
+                border-width: 0px 0px 0px 0px;
+                font-size:18pt;
+                border-style:solid;
+                border-color:black;
+                background:white;
+                height:15vh;
+                vertical-align: middle;
+                display:table-row;
+                padding:0px;
+            }
+
+            #header a,#header div{
+                background-color:black;
+                color:white;
+            }
+            
+            #header img{
+                max-height: 100%;
+                object-fit: contain;
+                display:table-cell;
+            }
+            #bod {
+                width:100%;
+                display: table-row;
+                border:0px;
+            }
+            #cards {
+                /*display: table-cell;*/
+                padding: 5px;
+                background:#ba4d12;
+                overflow-y:scroll;
+                overflow-x:auto;
+                height:75vh;
+            }
+            #cards img {
+                margin:5px;
+            }
+            #characterpane {
+                min-width:260px;
+                display: table-cell;
+                background:white;
+                margin:auto;
+                overflow-y:scroll;
+            }
+            /*img {
+                border-style: solid;
+                border-width: 1px;
+                border-color: grey;
+            }*/
+        </style>
+
+    </head>
+    <body>
+        <div style='display:table;background-color:white;width:100%;'>
+        <div id="header">
+            <img src='logo.png' />
+            <p style='margin:10px;display:table-cell;'>PROFILE: <a class="w3-button">DEFAULT</a></p>
+            <span style='margin:10px;display:table-cell;'>SHOW: <div class="w3-dropdown-hover">
+                 <button class="w3-button">EVERYONE</button>
+            <div class="w3-dropdown-content w3-button w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">EVERYONE</a>
+                <a href="#" class="w3-bar-item w3-button">FAVORITES ONLY</a>
+                <a href="#" class="w3-bar-item w3-button">TOP 5</a>
+            </div></div></span>
+            <span style='margin:10px;display:table-cell;'>SORT BY: <div class="w3-dropdown-hover">
+                 <button class="w3-button">NAME</button>
+            <div class="w3-dropdown-content w3-button w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">NAME</a>
+                <a href="#" class="w3-bar-item w3-button">POWER</a>
+                <a href="#" class="w3-bar-item w3-button">DEFENSE</a>
+                <a href="#" class="w3-bar-item w3-button">SPEED</a>
+                <a href="#" class="w3-bar-item w3-button">FLEXIBILITY</a>
+                <a href="#" class="w3-bar-item w3-button">RANGE</a>
+                <a href="#" class="w3-bar-item w3-button">RECOVERY</a>
+            </div></div></span>
+            <span style='margin:10px;display:table-cell;'>SEARCH: <input type="text" class="w3-text" />
+        </div>
+        </div>
+        <div style='display:table'>
+        <div id="bod">
+        <div style="display:table-cell;width:75%;padding:0px;margin:0px;border:0px;">
+        <div id="cards">
+            <img src='mario.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+            <img src='luigi.png' />
+        </div><!--</td><td>--></div>
+        <div id="characterpane">
+            <img src='mario.png' />
+            <p style='font-size:15pt'>TIPS</p>
+            <ul >
+                <li> <span style='font-weight:bold'>Kirito01:</span> <span style='font-family:Arial, Helvetica, sans-serif'> His side special is fun for trolling n00bs cuz it turns them around.</span></li>
+            </ul>
+            <a class="w3-button" style="background:black;color:white;">ADD COMMENT</a>
+
+        </div>
+        </div>
+        </div>
+        <!--<div style='width:100%;min-height:5px;height:100%;background:white' />-->
+            <!--</td></tr></table>-->
+    </body>
+</html>
