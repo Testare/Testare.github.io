@@ -1,0 +1,192 @@
+.portrait {
+    position: relative;
+    margin: 2px 0px 0px 5px;
+    width:132;
+    height:260;
+    display:block;
+}
+
+.Rating{
+    display:inline-block;
+    position: relative;
+    font-size:13pt;
+    left:138px;
+    top:-254px;
+    width:120px;
+    margin:0px;
+    padding:0px;
+    height:38px;
+}
+
+.Rating .redstar{
+    position: relative;
+    height:17px;
+    margin:0px;
+    padding:0px;
+    top:-21px;
+    left:-2px;
+    background-image:url("img2/redstars.png");
+    cursor: pointer;
+}
+
+.Rating .greystar{
+    position: relative;
+    height:17px;
+    width:77px;
+    margin:0px;
+    padding:0px;
+    top:-4px;
+    left:-2px;
+    background-image:url("img2/greystars.png");
+    cursor: pointer;
+}
+
+.Rating .yellowstar{
+    position: relative;
+    height:17px;
+    margin:0px;
+    padding:0px;
+    top:-38;
+    left:-2px;
+    background-image:url("img2/orangestars.png");
+    cursor: pointer;
+}
+.Rating .mousestar{
+    position: relative;
+    height:17px;
+    width:77px;
+    margin:0px;
+    padding:0px;
+    top:-55;
+    left:-2px;
+    background-color:transparent;
+    background-image:url("img2/mousestars.png");
+    cursor: pointer;
+    z-index:11;
+}
+
+
+body {
+    height:100%;
+    overflow-y:hidden;
+    background:#ba4d12;
+    padding:0px;
+    margin:0px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#header {
+    margin:0px;
+    border-width: 0px 0px 0px 0px;
+    font-size:18pt;
+    border-style:solid;
+    border-color:black;
+    background:white;
+    height:15vh;
+    vertical-align: middle;
+    display:table-row;
+    padding:0px;
+}
+
+#header span {
+    margin:10px;
+    display:table-cell;
+}
+
+#header a,#header div{
+    background-color:black;
+    color:white;
+    z-index: 20;
+}
+
+#header img{
+    max-height: 100%;
+    object-fit: contain;
+    display:table-cell;
+}
+#bod {
+    width:100%;
+    display: table-row;
+    border:0px;
+}
+#cards {
+    /*display: table-cell;*/
+    padding: 5px;
+    background:#ba4d12;
+    overflow-y:scroll;
+    overflow-x:auto;
+    height:95vh;
+}
+#cards img {
+    margin:5px;
+}
+.card {
+    width: 218px;
+    height:263px;
+    background-image:url("frame3.png");
+    display:inline-block;
+    margin:2px;
+}
+
+.card .name {
+    position: absolute;
+    left: 7px;
+    color:#ffffff;
+    font-size:18pt;
+    text-shadow:0px 0px 6px black;
+    bottom: 3px;
+}
+.card .favorite {
+    position:absolute;
+    display:block;
+    top:6px;
+    left:7px;
+    width: 30px;
+    height: 30px;
+    background-image:url("img2/goldenstar.png")
+}
+.card .unfavorite {
+    position:relative;
+    display:block;
+    top:6px;
+    left:7px;
+    width: 30px;
+    height: 30px;
+    background-image:url("img2/silverstar.png")
+
+}
+
+.card .detailsLink {
+    position:relative;
+    display:block;
+    top:-253px;
+    left:138px;
+    color:white;
+    font-size:13pt;
+}
+
+#cardtable .card .detailsLink:hover {
+    color:grey;
+    cursor: pointer;
+}
+
+/*.card .redstar {
+    position:relative;
+    display:block;
+    margin: 2px 0px 0px 5px;
+    width:132;
+    height:260;
+}*/
+
+#characterpane {
+    min-width:260px;
+    display: table-cell;
+    background:white;
+    margin:auto;
+    overflow-y:scroll;
+    padding:8px;
+}
+/*img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}*/

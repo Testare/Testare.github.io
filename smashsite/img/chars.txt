@@ -1,0 +1,674 @@
+const chars2 = {
+    Bowser: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Bowserjr: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Captainfalcon: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Charizard: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Chars: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Darkpitt: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Diddykong: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Doghunt: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Donkeykong: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Drmario: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Falco: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Fox: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Ganondorf: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Greninja: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Ike: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Jigglypuff: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Kingdedede: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Kirby: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Link: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Littlemac: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Lucario: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Lucas: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Lucina: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Luigi: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Mario: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Martch: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Megaman: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Metaknight: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Mewtwo: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Mii: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Mii1: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Mii2: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Mrgameandwatch: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Ness: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Olimar: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Pacman: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Palutena: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Peach: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Pikachu: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Pitt: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Rob: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Robin: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Rosalina: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Roy: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Ryu: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Samus: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Sheik: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Shulk: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Sonic: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Toonlink: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Villager: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Wario: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Wiifittrainer: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Yoshi: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Zelda: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    },
+    Zerosuitsamus: {
+        "favorite":false,
+        "ratings": {
+            "power":[0,4],
+            "defense":[0,1.5],
+            "speed":[0,2.5],
+            "flexibility":[0,1],
+            "range":[0,1.2],
+            "recovery":[0,3.2]
+        },
+        "comments":[]
+    }
+}
