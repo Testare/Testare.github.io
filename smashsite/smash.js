@@ -35,7 +35,7 @@ const Card = props => React.createElement(
     { className: "card" },
     React.createElement(
         "div",
-        { className: "portrait", style: { backgroundImage: `url('img/${props.name.toLowerCase().replace(/[\s\W]*/g, "")}.png')` } },
+        { className: "portrait", style: { backgroundImage: `url('img/${props.name.toLowerCase().replace(/[\s\W]*/g, "")}.png')` }, onClick: props.setSelected },
         React.createElement("div", { className: props.data["favorite"] ? "favorite" : "unfavorite", onClick: props.favoriteToon }),
         React.createElement(
             "span",
@@ -67,7 +67,7 @@ const CardPane = (_ref2) => {
 
     return React.createElement(
         "div",
-        null,
+        { className: "cardpane" },
         props.filters[props.currentFilter](searchFilter(props.searchTerm)(Object.entries(props.toons).sort(props.sorting[props.currentSorter]))).map(([name, dat]) => React.createElement(Card, {
             key: name,
             name: name,
@@ -99,7 +99,7 @@ const Header = props => React.createElement(
         React.createElement(
             "span",
             null,
-            "SHOW: ",
+            "FILTER CARDS: ",
             React.createElement(
                 "div",
                 { className: "w3-dropdown-hover" },
@@ -122,7 +122,7 @@ const Header = props => React.createElement(
         React.createElement(
             "span",
             null,
-            "SORT BY: ",
+            "SORT CARDS: ",
             React.createElement(
                 "div",
                 { className: "w3-dropdown-hover" },
@@ -157,7 +157,7 @@ const CardContent = (_ref3) => {
 
     return React.createElement(
         "div",
-        { style: { display: "table", height: "80vh" } },
+        { style: { display: "table", height: "90vh", overflowY: "auto" } },
         React.createElement(
             "div",
             { id: "bod" },
@@ -211,8 +211,8 @@ class WebPage extends React.Component {
         super(props);
         this.state = _extends({}, props, {
             selected: "Mario",
-            currentSorter: "NAME",
-            currentFilter: "EVERYONE",
+            currentSorter: "ALPHABET",
+            currentFilter: "NO FILTER",
             searchTerm: "",
             profile: "DEFAULT"
         });
@@ -286,13 +286,13 @@ const getRating = (a, stat) => a[1].ratings[stat][0] == 0 ? a[1].ratings[stat][1
 const searchFilter = term => term == "" ? a => a : a => a.filter(x => x[0].toLowerCase().includes(term.toLowerCase()));
 
 const filters = {
-    "EVERYONE": a => a,
+    "NO FILTER": a => a,
     "FAVORITES ONLY": a => a.filter(x => x[1].favorite),
     "TOP 5": a => a.slice(0, 5)
 };
 
 const sorting = {
-    NAME: (a, b) => a[0].localeCompare(b[0]),
+    ALPHABET: (a, b) => a[0].localeCompare(b[0]),
     POWER: (a, b) => getRating(b, "power") - getRating(a, "power"),
     DEFENSE: (a, b) => getRating(b, "defense") - getRating(a, "defense"),
     SPEED: (a, b) => getRating(b, "speed") - getRating(a, "speed"),

@@ -25,7 +25,7 @@ const Rating = ({ratingChange,...props}) => <span className="Rating">
         </span>
 
 const Card = props => <span className="card">
-        <div className="portrait" style={{backgroundImage:`url('img/${props.name.toLowerCase().replace(/[\s\W]*/g,"")}.png')`}}>
+        <div className="portrait" style={{backgroundImage:`url('img/${props.name.toLowerCase().replace(/[\s\W]*/g,"")}.png')`}} onClick={props.setSelected}>
             <div className={props.data["favorite"]?"favorite":"unfavorite"} onClick={props.favoriteToon}></div>
             <span className={"name"}>{props.name}</span>
         </div>
@@ -44,7 +44,7 @@ const Card = props => <span className="card">
         </div>
     </span>
 
-const CardPane = ({setSelected, updateToons, ...props}) => <div>
+const CardPane = ({setSelected, updateToons, ...props}) => <div className="cardpane">
         {props.filters[props.currentFilter](searchFilter(props.searchTerm)(
                 Object.entries(props.toons).sort(props.sorting[props.currentSorter])
             )).map(([name,dat]) => <Card 
@@ -61,14 +61,14 @@ const Header = (props) => <div style={{display:'table',backgroundColor:'white',w
         <div id="header">
             <img src='logo.png' />
             <span>PROFILE: <a className="w3-button" onClick={props.changeName}>{props.profile}</a></span>
-            <span>SHOW: <div className="w3-dropdown-hover">
+            <span>FILTER CARDS: <div className="w3-dropdown-hover">
                 <button className="w3-button">{props.currentFilter}</button>
             <div className="w3-dropdown-content w3-button w3-bar-block">
                 {Object.entries(props.filters).map(([name,fn]) => (
                     <a href="#" key={name} onClick={props.selectFilter(name)} className="w3-bar-item w3-button">{name}</a>
                 ))}
             </div></div></span>
-            <span>SORT BY: <div className="w3-dropdown-hover">
+            <span>SORT CARDS: <div className="w3-dropdown-hover">
                 <button className="w3-button">{props.currentSorter}</button>
             <div className="w3-dropdown-content w3-button w3-bar-block">
                 {Object.entries(props.sorting).map(([name,fn]) => (
@@ -81,7 +81,7 @@ const Header = (props) => <div style={{display:'table',backgroundColor:'white',w
 
 const CardContent = ({addTip, setSelected, updateToons, ...props}) => {
     return (
-            <div style={{display:"table",height:"80vh"}}>
+            <div style={{display:"table",height:"90vh", overflowY:"auto"}}>
                 <div id="bod">
                     <div id="cardtable" style={{display:"table-cell",width:"75%",padding:0,margin:0,border:0}}>
                         <CardPane {...props} favoriteToon={favoriteToon(updateToons)} setSelected={setSelected} updateToons={updateToons} />
@@ -109,8 +109,8 @@ class WebPage extends React.Component {
         this.state = {
             ...props,
             selected:"Mario",
-            currentSorter:"NAME",
-            currentFilter:"EVERYONE",
+            currentSorter:"ALPHABET",
+            currentFilter:"NO FILTER",
             searchTerm:"",
             profile:"DEFAULT",
         }
@@ -190,13 +190,13 @@ const searchFilter = term => (term == "")
     : a => a.filter(x=>x[0].toLowerCase().includes(term.toLowerCase()) )
 
 const filters = {
-    "EVERYONE": a => a,
+    "NO FILTER": a => a,
     "FAVORITES ONLY": a => a.filter(x=>x[1].favorite),
     "TOP 5":a => a.slice(0,5)
 }
 
 const sorting = {
-    NAME: (a, b) => a[0].localeCompare(b[0]),
+    ALPHABET: (a, b) => a[0].localeCompare(b[0]),
     POWER: (a, b) => getRating(b,"power") - getRating(a,"power"),
     DEFENSE: (a, b) => getRating(b,"defense") - getRating(a,"defense"),
     SPEED: (a, b) => getRating(b,"speed") - getRating(a,"speed"),

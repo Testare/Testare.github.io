@@ -281,7 +281,7 @@ const chars2 = {
         "favorite":false,
         "ratings": {
             "power":[0,4],
-            "defense":[0,1.5],
+            "defense":[0,1.3],
             "speed":[0,2.5],
             "flexibility":[0,1],
             "range":[0,1.2],
